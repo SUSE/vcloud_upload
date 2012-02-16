@@ -24,6 +24,8 @@ class TestUpload < Test::Unit::TestCase
 
     cloudup.uploadOVF(cloudup.each('vdc')[i].link, cloudup.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 52000000)
 
+    puts client.status
+
     cloudup.logout
 
 
@@ -47,6 +49,7 @@ class TestUpload < Test::Unit::TestCase
 
       client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 100)
 
+      puts client.status
     end
 
 
