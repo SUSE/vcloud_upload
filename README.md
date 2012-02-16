@@ -12,60 +12,62 @@ In both cases you have to initialize an vcloud_upload Client with you login data
 
 The unsafe way look like this:
 
-    require 'vcloud_upload'
+```ruby
+require 'vcloud_upload'
 
-    client = VCloudUpload::Client.new('Username', 'Organisation', 'Password', 'https://vcd1.examplehost.com')
+client = VCloudUpload::Client.new('Username', 'Organisation', 'Password', 'https://vcd1.examplehost.com')
 
 
-    puts "Choose a vDC:\n"
-    i = 0
-    client.each('vdc') do |vdc|
-        i += 1
-        puts "#{i.to_s}. #{vdc.name} \n"
-    end
-    i = gets.chomp.to_i
+puts "Choose a vDC:\n"
+i = 0
+client.each('vdc') do |vdc|
+  i += 1
+  puts "#{i.to_s}. #{vdc.name} \n"
+end
+i = gets.chomp.to_i
 
-    puts "Choose a catalog:\n"
-    j = 0
-    client.each('catalog') do |item|
-        j += 1
-        puts "{#j.to_s}. #{item.name}"
-    end
-    j = gets.chomp.to_i
+puts "Choose a catalog:\n"
+j = 0
+client.each('catalog') do |item|
+  j += 1
+  puts "{#j.to_s}. #{item.name}"
+end
+j = gets.chomp.to_i
 
-    client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
+client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
 
-    client.logout
+client.logout
+```
 
 When you know you could forget the client.logout, then try this one:
 
-    require 'vcloud_upload'
+```ruby
+require 'vcloud_upload'
 
-    VCloudUpload.session('Username', 'Organisation', 'Password', 'https://vcd1.examplehost.com') do |client|
+VCloudUpload.session('Username', 'Organisation', 'Password', 'https://vcd1.examplehost.com') do |client|
 
-        puts "Choose a vDC:\n"
-        i = 0
-        client.each('vdc') do |vdc|
-            i += 1
-            puts "#{i.to_s}. #{vdc.name} \n"
-        end
-        i = gets.chomp.to_i
+  puts "Choose a vDC:\n"
+  i = 0
+  client.each('vdc') do |vdc|
+    i += 1
+    puts "#{i.to_s}. #{vdc.name} \n"
+  end
+  i = gets.chomp.to_i
 
-        puts "Choose a catalog:\n"
-        j = 0
-        client.each('catalog') do |item|
-            j += 1
-            puts "{#j.to_s}. #{item.name}"
-        end
-        j = gets.chomp.to_i
+  puts "Choose a catalog:\n"
+  j = 0
+  client.each('catalog') do |item|
+    j += 1
+    puts "{#j.to_s}. #{item.name}"
+  end
+  j = gets.chomp.to_i
 
-        client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
+  client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
 
-    end
-
+end
+```
 
 It is very import that you use the Client.logout method, because the application can throw an Error on the upload.
-
 
 For more read the documentation.
 
