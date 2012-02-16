@@ -3,7 +3,7 @@ VMware vCloud(TM) OVF uploader [vcloud_uploader]
 
 Please read the complete README before you start!
 
-How to use its
+How to use it
 --------------
 
 You can use the vcloud_upload on two different ways. No worry about the version, vcloud_upload supports 1.0 and 1.5 and took the right one automatically.
