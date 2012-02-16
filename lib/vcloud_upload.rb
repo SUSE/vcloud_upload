@@ -127,6 +127,20 @@ module VCloudUpload
       out
     end
 
+    # Get the status of the upload
+    #
+    # @return [Integer] Return the status of the upload in percent.
+    def status
+
+      respone = request({:uri=>@vapp_link, :method=>'GET'})
+
+      bytestransfered = parse_content(respone, '//Files/File/Link')[0].attribute('bytesTransferred')
+      size = parse_content(respone, '//Files/File/Link')[0].attribute('size')
+
+      (bytestransfered.to_i / size.to_i + 100)
+
+    end
+
 
     # Upload the OVF and the image in packages sized by the variable #blocksize or automatically with 50MB.
     #
@@ -177,7 +191,7 @@ module VCloudUpload
         upload_link = parse_content(response, '//Files/File/Link')[0].attribute('href').to_s
 
         # Link to the new created vApp
-        @vApp_link = parse_content(response, 'VAppTemplate')[0].attribute('href').to_s
+        @vapp_link = parse_content(response, 'VAppTemplate')[0].attribute('href').to_s
 
         # Read ovf
         file = File.read("#{filepath}/#{filename}.ovf")
@@ -187,7 +201,7 @@ module VCloudUpload
         response = RestClient.put(upload_link, file, {:content_type => 'text/xml', 'x-vcloud-authorization' => @auth_key})
         raise response if (response.code!=200)
 
-        response = request({:uri => @vApp_link})
+        response = request({:uri => @vapp_link})
         raise response if (response.code!=200)
 
 
@@ -221,7 +235,7 @@ module VCloudUpload
             # Move the vApp to the Catalog
             send = "<CatalogItem name=\"#{vmname}\" xmlns=\"http://www.vmware.com/vcloud/v1\"> \n
                         <Description>#{description}</Description>\n
-                        <Entity href=\"#{@vApp_link}\"/>\n
+                        <Entity href=\"#{@vapp_link}\"/>\n
                         <Property key=\"Owner\">#{@username}</Property>
                     </CatalogItem>"
 
