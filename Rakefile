@@ -18,7 +18,7 @@ begin
  require 'yard'
   YARD::Rake::YardocTask.new(:doc) do |t|
     t.files = ['lib/**/*.rb']
-    t.options = ['--no-private']
+    t.options = ['--private']
   end
 rescue LoadError
   STDERR.puts "Uses RDoc instead of yardoc! Install yardoc for bedder documentation."
