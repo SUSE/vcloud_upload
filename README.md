@@ -3,7 +3,6 @@ VMware vCloud(tm) OVF uploader
 
 Please read the complete README before you start!
 
-
 How to use its
 --------------
 
@@ -64,9 +63,11 @@ When you know you could forget the client.logout, then try this one:
 
     end
 
+
 It is very import that you use the Client.logout method, because the application can throw an Error on the upload.
 
 
+For more read the documentation.
 
 License
 -------
