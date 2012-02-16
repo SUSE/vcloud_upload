@@ -2,7 +2,7 @@ $:.push(File.join(File.dirname(__FILE__), 'lib'))
 
 require 'rubygems'
 require 'bundler'
-require 'vCloudUpload/version'
+require 'vcloud_upload/version'
 require 'rake/testtask'
 
 task :default => [:test]
