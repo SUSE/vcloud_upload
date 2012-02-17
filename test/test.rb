@@ -22,7 +22,7 @@ class TestUpload < Test::Unit::TestCase
       end
       j = gets.chomp.to_i
 
-    cloudup.uploadOVF(cloudup.each('vdc')[i].link, cloudup.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 52000000)
+    cloudup.upload_ovf(cloudup.each('vdc')[i].link, cloudup.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 52000000)
 
     puts client.status
 
@@ -47,7 +47,7 @@ class TestUpload < Test::Unit::TestCase
       end
       j = gets.chomp.to_i
 
-      client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 100)
+      client.upload_ovf(client.each('vdc')[i].link, client.each('catalog')[j].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','/home/user/vCloudUpload-0.0.1', 'Just a little test.', 100)
 
       puts client.status
     end
