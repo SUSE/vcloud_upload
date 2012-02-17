@@ -6,6 +6,11 @@ require '../lib/vcloud_upload'
 
 class VClient < Clamp::Command
 
+  # Setup a logger and connect it with stupid libraries
+  # that can't use a logger
+  VCloudUpload::Logging.logger = Logger.new(STDERR)
+  # Don't show by default anything
+  VCloudUpload::Logging.logger.level = Logger::FATAL
 
   subcommand "upload", "Upload an OVG" do
     parameter "USERNAME", "The username"
