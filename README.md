@@ -34,7 +34,7 @@ client.each(:catalog) do |item|
 end
 j = gets.chomp.to_i
 
-client.uploadOVF(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description'})
+client.upload_ovf(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description'})
 
 client.logout
 ```
@@ -62,7 +62,7 @@ VCloudUpload::Client.session('Username', 'Organisation', 'Password', 'vcd1.examp
   end
   j = gets.chomp.to_i
 
-  client.uploadOVF(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description', :blocksize => 12000000}) do |status|
+  client.upload_ovf(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description', :blocksize => 12000000}) do |status|
     puts status
   end
 
