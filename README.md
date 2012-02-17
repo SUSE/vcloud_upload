@@ -30,11 +30,11 @@ puts "Choose a catalog:\n"
 j = 0
 client.each(:catalog) do |item|
   j += 1
-  puts "{#j.to_s}. #{item.name}"
+  puts "#{j.to_s}. #{item.name}"
 end
 j = gets.chomp.to_i
 
-client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
+client.uploadOVF(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description'})
 
 client.logout
 ```
@@ -44,11 +44,11 @@ When you know you could forget the client.logout, then try this one:
 ```ruby
 require 'vcloud_upload'
 
-VCloudUpload.session('Username', 'Organisation', 'Password', 'vcd1.examplehost.com') do |client|
+VCloudUpload::Client.session('Username', 'Organisation', 'Password', 'vcd1.examplehost.com') do |client|
 
   puts "Choose a vDC:\n"
   i = 0
-  client.each('vdc') do |vdc|
+  client.each(:vdc) do |vdc|
     i += 1
     puts "#{i.to_s}. #{vdc.name} \n"
   end
@@ -56,13 +56,15 @@ VCloudUpload.session('Username', 'Organisation', 'Password', 'vcd1.examplehost.c
 
   puts "Choose a catalog:\n"
   j = 0
-  client.each('catalog') do |item|
+  client.each(:catalog) do |item|
     j += 1
-    puts "{#j.to_s}. #{item.name}"
+    puts "#{j.to_s}. #{item.name}"
   end
   j = gets.chomp.to_i
 
-  client.uploadOVF(client.each('vdc')[i].link, client.each('catalog')[j].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', 'a random description')
+  client.uploadOVF(client.each(:vdc)[i-1].link, client.each(:catalog)[j-1].link, 'Name of your VM', 'OVFFilename', 'path/to/the/ovf', {:description => 'a random description', :blocksize => 12000000}) do |status|
+    puts status
+  end
 
 end
 ```
