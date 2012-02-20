@@ -1,0 +1,929 @@
+--- 
+http_interactions: 
+- request: 
+    method: get
+    uri: https://example.com/api/versions
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - ""
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:31 GMT
+      content-length: 
+      - "23853"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <SupportedVersions xmlns="http://www.vmware.com/vcloud/versions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/versions http://example.com/api/versions/schema/versions.xsd">
+          <VersionInfo>
+              <Version>1.0</Version>
+              <LoginUrl>https://example.com/api/v1.0/login</LoginUrl>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.catalog+xml</MediaType>
+                  <ComplexTypeName>CatalogType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.catalogItem+xml</MediaType>
+                  <ComplexTypeName>CatalogItemType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.error+xml</MediaType>
+                  <ComplexTypeName>ErrorType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.instantiateOvfParams+xml</MediaType>
+                  <ComplexTypeName>InstantiateOvfParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.media+xml</MediaType>
+                  <ComplexTypeName>MediaType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.network+xml</MediaType>
+                  <ComplexTypeName>NetworkType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.org+xml</MediaType>
+                  <ComplexTypeName>OrgType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.orgList+xml</MediaType>
+                  <ComplexTypeName>OrgListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.task+xml</MediaType>
+                  <ComplexTypeName>TaskType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.tasksList+xml</MediaType>
+                  <ComplexTypeName>TasksListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml</MediaType>
+                  <ComplexTypeName>UploadVAppTemplateParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vApp+xml</MediaType>
+                  <ComplexTypeName>VAppType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vAppTemplate+xml</MediaType>
+                  <ComplexTypeName>VAppTemplateType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vm+xml</MediaType>
+                  <ComplexTypeName>VmType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vdc+xml</MediaType>
+                  <ComplexTypeName>VdcType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vmPendingAnswer+xml</MediaType>
+                  <ComplexTypeName>VmQuestionAnswerType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.composeVAppParams+xml</MediaType>
+                  <ComplexTypeName>ComposeVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.cloneVAppParams+xml</MediaType>
+                  <ComplexTypeName>CloneVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.cloneMediaParams+xml</MediaType>
+                  <ComplexTypeName>CloneMediaParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.cloneVAppTemplateParams+xml</MediaType>
+                  <ComplexTypeName>CloneVAppTemplateParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.controlAccess+xml</MediaType>
+                  <ComplexTypeName>ControlAccessParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.deployVAppParams+xml</MediaType>
+                  <ComplexTypeName>DeployVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.instantiateVAppTemplateParams+xml</MediaType>
+                  <ComplexTypeName>InstantiateVAppTemplateParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.mediaInsertOrEjectParams+xml</MediaType>
+                  <ComplexTypeName>MediaInsertOrEjectParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.networkConfigSection+xml</MediaType>
+                  <ComplexTypeName>NetworkConfigSectionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.networkConnectionSection+xml</MediaType>
+                  <ComplexTypeName>NetworkConnectionSectionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.vmPendingQuestion+xml</MediaType>
+                  <ComplexTypeName>VmPendingQuestionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.rasdItem+xml</MediaType>
+                  <ComplexTypeName>RASD_Type</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.rasdItemsList+xml</MediaType>
+                  <ComplexTypeName>RasdItemsListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.screenTicket+xml</MediaType>
+                  <ComplexTypeName>ScreenTicketType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.undeployVAppParams+xml</MediaType>
+                  <ComplexTypeName>UndeployVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.captureVAppParams+xml</MediaType>
+                  <ComplexTypeName>CaptureVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.recomposeVAppParams+xml</MediaType>
+                  <ComplexTypeName>RecomposeVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.guestCustomizationSection+xml</MediaType>
+                  <ComplexTypeName>GuestCustomizationSectionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.customizationSection+xml</MediaType>
+                  <ComplexTypeName>CustomizationSectionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.leaseSettingsSection+xml</MediaType>
+                  <ComplexTypeName>LeaseSettingsSectionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.startupSection+xml</MediaType>
+                  <ComplexTypeName>StartupSection_Type</ComplexTypeName>
+                  <SchemaLocation>http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.virtualHardwareSection+xml</MediaType>
+                  <ComplexTypeName>VirtualHardwareSection_Type</ComplexTypeName>
+                  <SchemaLocation>http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.operatingSystemSection+xml</MediaType>
+                  <ComplexTypeName>OperatingSystemSection_Type</ComplexTypeName>
+                  <SchemaLocation>http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.vcloud.networkSection+xml</MediaType>
+                  <ComplexTypeName>NetworkSection_Type</ComplexTypeName>
+                  <SchemaLocation>http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.organization+xml</MediaType>
+                  <ComplexTypeName>AdminOrgType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.providervdc+xml</MediaType>
+                  <ComplexTypeName>ProviderVdcType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.role+xml</MediaType>
+                  <ComplexTypeName>RoleType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.user+xml</MediaType>
+                  <ComplexTypeName>UserType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vcloud+xml</MediaType>
+                  <ComplexTypeName>VCloudType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vdc+xml</MediaType>
+                  <ComplexTypeName>AdminVdcType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.group+xml</MediaType>
+                  <ComplexTypeName>GroupType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.publishCatalogParams+xml</MediaType>
+                  <ComplexTypeName>PublishCatalogParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.right+xml</MediaType>
+                  <ComplexTypeName>RightType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.catalog+xml</MediaType>
+                  <ComplexTypeName>CatalogType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.network+xml</MediaType>
+                  <ComplexTypeName>NetworkType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.networkPool+xml</MediaType>
+                  <ComplexTypeName>NetworkPoolType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vdcReferences+xml</MediaType>
+                  <ComplexTypeName>VdcReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/master.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwExtension+xml</MediaType>
+                  <ComplexTypeName>VMWExtensionType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwProviderVdcReferences+xml</MediaType>
+                  <ComplexTypeName>VMWProviderVdcReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwExternalNetworkReferences+xml</MediaType>
+                  <ComplexTypeName>VMWExternalNetworkReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwNetworkPoolReferences+xml</MediaType>
+                  <ComplexTypeName>VMWNetworkPoolReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwVimServerReferences+xml</MediaType>
+                  <ComplexTypeName>VMWVimServerReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwHostReferences+xml</MediaType>
+                  <ComplexTypeName>VMWHostReferencesType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.host+xml</MediaType>
+                  <ComplexTypeName>HostType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwvirtualcenter+xml</MediaType>
+                  <ComplexTypeName>VimServerType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwprovidervdc+xml</MediaType>
+                  <ComplexTypeName>VMWProviderVdcType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwexternalnet+xml</MediaType>
+                  <ComplexTypeName>VMWExternalNetworkType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.prepareHostParams+xml</MediaType>
+                  <ComplexTypeName>PrepareHostParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.registerVimServerParams+xml</MediaType>
+                  <ComplexTypeName>RegisterVimServerParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmsObjectRefsList+xml</MediaType>
+                  <ComplexTypeName>VmObjectRefsListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.importVmAsVAppParams+xml</MediaType>
+                  <ComplexTypeName>ImportVmAsVAppParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.importVmAsVAppTemplateParams+xml</MediaType>
+                  <ComplexTypeName>ImportVmAsVAppTemplateParamsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.resourcePoolList+xml</MediaType>
+                  <ComplexTypeName>ResourcePoolListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.licensingReport+xml</MediaType>
+                  <ComplexTypeName>LicensingReportType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.licensingReportList+xml</MediaType>
+                  <ComplexTypeName>LicensingReportListType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmwNetworkPool+xml</MediaType>
+                  <ComplexTypeName>VMWNetworkPoolType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.portGroupPool+xml</MediaType>
+                  <ComplexTypeName>PortGroupPoolType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vlanPool+xml</MediaType>
+                  <ComplexTypeName>VlanPoolType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.fencePool+xml</MediaType>
+                  <ComplexTypeName>FencePoolType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vimObjectRefs+xml</MediaType>
+                  <ComplexTypeName>VimObjectRefsType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vimObjectRef+xml</MediaType>
+                  <ComplexTypeName>VimObjectRefType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+              <MediaTypeMapping>
+                  <MediaType>application/vnd.vmware.admin.vmObjectRef+xml</MediaType>
+                  <ComplexTypeName>VmObjectRefType</ComplexTypeName>
+                  <SchemaLocation>http://example.com/api/v1.0/schema/vmwextensions.xsd</SchemaLocation>
+              </MediaTypeMapping>
+          </VersionInfo>
+      </SupportedVersions>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:06 GMT
+- request: 
+    method: post
+    uri: https://Max_Mustermann%40SRo:123456@example.com/api/v1.0/login
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - ""
+      authorization: 
+      - Basic Q2hyaXN0b3BoX1RoaWVsQFNXTENvOlNVU0VzdHVkaW8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.orglist+xml
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      date: 
+      - Mon, 20 Feb 2012 12:21:32 GMT
+      content-length: 
+      - "469"
+      set-cookie: 
+      - vcloud-token=UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=; Secure; Path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <OrgList xmlns="http://www.vmware.com/vcloud/v1" type="application/vnd.vmware.vcloud.orgList+xml" href="https://example.com/api/v1.0/org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Org type="application/vnd.vmware.vcloud.org+xml" name="SRo" href="https://example.com/api/v1.0/org/1204509397"/>
+      </OrgList>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:07 GMT
+- request: 
+    method: get
+    uri: https://example.com/api/v1.0/org/1204509397
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.org+xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:33 GMT
+      content-length: 
+      - "3587"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Org xmlns="http://www.vmware.com/vcloud/v1" name="SRo" type="application/vnd.vmware.vcloud.org+xml" href="https://example.com/api/v1.0/org/1204509397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_ALLC_vDC03" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_RESV_vDC02" href="https://example.com/api/v1.0/vdc/1081642178"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_PAYG_vDC01" href="https://example.com/api/v1.0/vdc/1432230386"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.tasksList+xml" href="https://example.com/api/v1.0/tasksList/1204509397"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_SaaS" href="https://example.com/api/v1.0/catalog/1757783758"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="test" href="https://example.com/api/v1.0/catalog/745351971"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_Public" href="https://example.com/api/v1.0/catalog/2034593819"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Dell_Services" href="https://example.com/api/v1.0/catalog/826989724"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/826989724/controlAccess/"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Management" href="https://example.com/api/v1.0/catalog/210096822"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internal" href="https://example.com/api/v1.0/network/309031880"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internet" href="https://example.com/api/v1.0/network/1319281492"/>
+          <Description>created 9/27/2011</Description>
+          <FullName>HealthCo</FullName>
+      </Org>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:08 GMT
+- request: 
+    method: get
+    uri: https://example.com/api/v1.0/org/1204509397
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.org+xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:36 GMT
+      content-length: 
+      - "3587"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Org xmlns="http://www.vmware.com/vcloud/v1" name="SRo" type="application/vnd.vmware.vcloud.org+xml" href="https://example.com/api/v1.0/org/1204509397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_ALLC_vDC03" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_RESV_vDC02" href="https://example.com/api/v1.0/vdc/1081642178"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_PAYG_vDC01" href="https://example.com/api/v1.0/vdc/1432230386"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.tasksList+xml" href="https://example.com/api/v1.0/tasksList/1204509397"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_SaaS" href="https://example.com/api/v1.0/catalog/1757783758"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="test" href="https://example.com/api/v1.0/catalog/745351971"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_Public" href="https://example.com/api/v1.0/catalog/2034593819"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Dell_Services" href="https://example.com/api/v1.0/catalog/826989724"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/826989724/controlAccess/"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Management" href="https://example.com/api/v1.0/catalog/210096822"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internal" href="https://example.com/api/v1.0/network/309031880"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internet" href="https://example.com/api/v1.0/network/1319281492"/>
+          <Description>created 9/27/2011</Description>
+          <FullName>HealthCo</FullName>
+      </Org>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:10 GMT
+- request: 
+    method: get
+    uri: https://example.com/api/v1.0/org/1204509397
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.org+xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:37 GMT
+      content-length: 
+      - "3587"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Org xmlns="http://www.vmware.com/vcloud/v1" name="SRo" type="application/vnd.vmware.vcloud.org+xml" href="https://example.com/api/v1.0/org/1204509397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_ALLC_vDC03" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_RESV_vDC02" href="https://example.com/api/v1.0/vdc/1081642178"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_PAYG_vDC01" href="https://example.com/api/v1.0/vdc/1432230386"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.tasksList+xml" href="https://example.com/api/v1.0/tasksList/1204509397"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_SaaS" href="https://example.com/api/v1.0/catalog/1757783758"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="test" href="https://example.com/api/v1.0/catalog/745351971"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_Public" href="https://example.com/api/v1.0/catalog/2034593819"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Dell_Services" href="https://example.com/api/v1.0/catalog/826989724"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/826989724/controlAccess/"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Management" href="https://example.com/api/v1.0/catalog/210096822"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internal" href="https://example.com/api/v1.0/network/309031880"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internet" href="https://example.com/api/v1.0/network/1319281492"/>
+          <Description>created 9/27/2011</Description>
+          <FullName>HealthCo</FullName>
+      </Org>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:12 GMT
+- request: 
+    method: get
+    uri: https://example.com/api/v1.0/org/1204509397
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.org+xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:38 GMT
+      content-length: 
+      - "3587"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Org xmlns="http://www.vmware.com/vcloud/v1" name="SRo" type="application/vnd.vmware.vcloud.org+xml" href="https://example.com/api/v1.0/org/1204509397" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_ALLC_vDC03" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_RESV_vDC02" href="https://example.com/api/v1.0/vdc/1081642178"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.vdc+xml" name="SRo_PAYG_vDC01" href="https://example.com/api/v1.0/vdc/1432230386"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.tasksList+xml" href="https://example.com/api/v1.0/tasksList/1204509397"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_SaaS" href="https://example.com/api/v1.0/catalog/1757783758"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/1757783758/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="test" href="https://example.com/api/v1.0/catalog/745351971"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/745351971/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="HealthCo_Public" href="https://example.com/api/v1.0/catalog/2034593819"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/2034593819/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Dell_Services" href="https://example.com/api/v1.0/catalog/826989724"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/826989724/controlAccess/"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.catalog+xml" name="Management" href="https://example.com/api/v1.0/catalog/210096822"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/controlAccess/"/>
+          <Link rel="controlAccess" type="application/vnd.vmware.vcloud.controlAccess+xml" href="https://example.com/api/v1.0/org/1204509397/catalog/210096822/action/controlAccess"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internal" href="https://example.com/api/v1.0/network/309031880"/>
+          <Link rel="down" type="application/vnd.vmware.vcloud.network+xml" name="SRo_Internet" href="https://example.com/api/v1.0/network/1319281492"/>
+          <Description>created 9/27/2011</Description>
+          <FullName>HealthCo</FullName>
+      </Org>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:13 GMT
+- request: 
+    method: post
+    uri: https://example.com/api/v1.0/vdc/1135817649/action/uploadVAppTemplate
+    body: |-
+      <UploadVAppTemplateParams name="vCloudUpload Test" xmlns="http://www.vmware.com/vcloud/v1"> 
+      
+                      <Description></Description>
+      </UploadVAppTemplateParams>
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.uploadVAppTemplateParams+xml
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "165"
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.vAppTemplate+xml
+      location: 
+      - https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994
+      date: 
+      - Mon, 20 Feb 2012 12:21:39 GMT
+      content-length: 
+      - "1998"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <VAppTemplate xmlns="http://www.vmware.com/vcloud/v1" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" ovfDescriptorUploaded="false" status="0" name="vCloudUpload Test" type="application/vnd.vmware.vcloud.vAppTemplate+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.dmtf.org/ovf/envelope/1 http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="up" type="application/vnd.vmware.vcloud.vdc+xml" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Link rel="remove" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994"/>
+          <Description/>
+          <Files>
+              <File size="-1" bytesTransferred="0" name="descriptor.ovf">
+                  <Link rel="upload:default" href="https://example.com:443/transfer/047fa313-0135-4512-8035-a2571c3e1e57/descriptor.ovf"/>
+              </File>
+          </Files>
+          <Children/>
+          <LeaseSettingsSection type="application/vnd.vmware.vcloud.leaseSettingsSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/leaseSettingsSection/" ovf:required="false">
+              <ovf:Info>Lease settings section</ovf:Info>
+              <Link rel="edit" type="application/vnd.vmware.vcloud.leaseSettingsSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/leaseSettingsSection/"/>
+              <StorageLeaseInSeconds>0</StorageLeaseInSeconds>
+          </LeaseSettingsSection>
+          <CustomizationSection type="application/vnd.vmware.vcloud.customizationSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/customizationSection/" ovf:required="false">
+              <ovf:Info>VApp template customization section</ovf:Info>
+              <CustomizeOnInstantiate>false</CustomizeOnInstantiate>
+          </CustomizationSection>
+      </VAppTemplate>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:14 GMT
+- request: 
+    method: put
+    uri: https://example.com/transfer/047fa313-0135-4512-8035-a2571c3e1e57/descriptor.ovf
+    body: |-
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!--Generated by VMware ovftool 2.0.1 (build-260188), User: , UTC time: 2012-02-08T07:43:04.602752Z-->
+      <Envelope vmw:buildId="build-260188" xmlns="http://schemas.dmtf.org/ovf/envelope/1" xmlns:cim="http://schemas.dmtf.org/wbem/wscim/1/common" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" xmlns:rasd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_ResourceAllocationSettingData" xmlns:vmw="http://www.vmware.com/schema/ovf" xmlns:vssd="http://schemas.dmtf.org/wbem/wscim/1/cim-schema/2/CIM_VirtualSystemSettingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <References>
+          <File ovf:href="vCloudWrapper.i686-0.0.1-disk1.vmdk" ovf:id="file1" ovf:size="166127616"/>
+        </References>
+        <DiskSection>
+          <Info>Virtual disk information</Info>
+          <Disk ovf:capacity="16" ovf:capacityAllocationUnits="byte * 2^30" ovf:diskId="vmdisk1" ovf:fileRef="file1" ovf:format="http://www.vmware.com/interfaces/specifications/vmdk.html#streamOptimized" ovf:populatedSize="380567552"/>
+        </DiskSection>
+        <NetworkSection>
+          <Info>The list of logical networks</Info>
+          <Network ovf:name="bridged">
+            <Description>The bridged network</Description>
+          </Network>
+        </NetworkSection>
+        <VirtualSystem ovf:id="vm">
+          <Info>A virtual machine</Info>
+          <Name>vCloudWrapper.i686-0.0.1</Name>
+          <OperatingSystemSection ovf:id="82" vmw:osType="suseGuest">
+            <Info>The kind of installed guest operating system</Info>
+          </OperatingSystemSection>
+          <VirtualHardwareSection>
+            <Info>Virtual hardware requirements</Info>
+            <System>
+              <vssd:ElementName>Virtual Hardware Family</vssd:ElementName>
+              <vssd:InstanceID>0</vssd:InstanceID>
+              <vssd:VirtualSystemIdentifier>vCloudWrapper.i686-0.0.1</vssd:VirtualSystemIdentifier>
+              <vssd:VirtualSystemType>vmx-04</vssd:VirtualSystemType>
+            </System>
+            <Item>
+              <rasd:AllocationUnits>hertz * 10^6</rasd:AllocationUnits>
+              <rasd:Description>Number of Virtual CPUs</rasd:Description>
+              <rasd:ElementName>1 virtual CPU(s)</rasd:ElementName>
+              <rasd:InstanceID>1</rasd:InstanceID>
+              <rasd:ResourceType>3</rasd:ResourceType>
+              <rasd:VirtualQuantity>1</rasd:VirtualQuantity>
+            </Item>
+            <Item>
+              <rasd:AllocationUnits>byte * 2^20</rasd:AllocationUnits>
+              <rasd:Description>Memory Size</rasd:Description>
+              <rasd:ElementName>512MB of memory</rasd:ElementName>
+              <rasd:InstanceID>2</rasd:InstanceID>
+              <rasd:ResourceType>4</rasd:ResourceType>
+              <rasd:VirtualQuantity>512</rasd:VirtualQuantity>
+            </Item>
+            <Item ovf:required="false">
+              <rasd:Address>0</rasd:Address>
+              <rasd:Description>USB Controller</rasd:Description>
+              <rasd:ElementName>usb</rasd:ElementName>
+              <rasd:InstanceID>3</rasd:InstanceID>
+              <rasd:ResourceType>23</rasd:ResourceType>
+            </Item>
+            <Item>
+              <rasd:Address>0</rasd:Address>
+              <rasd:Description>SCSI Controller</rasd:Description>
+              <rasd:ElementName>scsiController0</rasd:ElementName>
+              <rasd:InstanceID>4</rasd:InstanceID>
+              <rasd:ResourceSubType>lsilogic</rasd:ResourceSubType>
+              <rasd:ResourceType>6</rasd:ResourceType>
+            </Item>
+            <Item>
+              <rasd:Address>0</rasd:Address>
+              <rasd:Description>IDE Controller</rasd:Description>
+              <rasd:ElementName>ideController0</rasd:ElementName>
+              <rasd:InstanceID>5</rasd:InstanceID>
+              <rasd:ResourceType>5</rasd:ResourceType>
+            </Item>
+            <Item ovf:required="false">
+              <rasd:AddressOnParent>0</rasd:AddressOnParent>
+              <rasd:AutomaticAllocation>false</rasd:AutomaticAllocation>
+              <rasd:Description>Floppy Drive</rasd:Description>
+              <rasd:ElementName>floppy0</rasd:ElementName>
+              <rasd:InstanceID>6</rasd:InstanceID>
+              <rasd:ResourceType>14</rasd:ResourceType>
+            </Item>
+            <Item ovf:required="false">
+              <rasd:AddressOnParent>0</rasd:AddressOnParent>
+              <rasd:AutomaticAllocation>false</rasd:AutomaticAllocation>
+              <rasd:ElementName>cdrom1</rasd:ElementName>
+              <rasd:InstanceID>7</rasd:InstanceID>
+              <rasd:Parent>5</rasd:Parent>
+              <rasd:ResourceType>15</rasd:ResourceType>
+            </Item>
+            <Item>
+              <rasd:AddressOnParent>0</rasd:AddressOnParent>
+              <rasd:ElementName>disk1</rasd:ElementName>
+              <rasd:HostResource>ovf:/disk/vmdisk1</rasd:HostResource>
+              <rasd:InstanceID>8</rasd:InstanceID>
+              <rasd:Parent>4</rasd:Parent>
+              <rasd:ResourceType>17</rasd:ResourceType>
+            </Item>
+            <Item>
+              <rasd:AddressOnParent>2</rasd:AddressOnParent>
+              <rasd:AutomaticAllocation>true</rasd:AutomaticAllocation>
+              <rasd:Connection>bridged</rasd:Connection>
+              <rasd:Description>E1000 ethernet adapter on &quot;bridged&quot;</rasd:Description>
+              <rasd:ElementName>ethernet0</rasd:ElementName>
+              <rasd:InstanceID>9</rasd:InstanceID>
+              <rasd:ResourceSubType>E1000</rasd:ResourceSubType>
+              <rasd:ResourceType>10</rasd:ResourceType>
+            </Item>
+          </VirtualHardwareSection>
+        </VirtualSystem>
+      </Envelope>
+    headers: 
+      content-type: 
+      - text/xml
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      content-length: 
+      - "5152"
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 20 Feb 2012 12:21:40 GMT
+      content-length: 
+      - "0"
+    body: ""
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:15 GMT
+- request: 
+    method: get
+    uri: https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/vnd.vmware.vcloud.vapptemplate+xml
+      date: 
+      - Mon, 20 Feb 2012 12:21:41 GMT
+      content-length: 
+      - "2481"
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <VAppTemplate xmlns="http://www.vmware.com/vcloud/v1" xmlns:ovf="http://schemas.dmtf.org/ovf/envelope/1" ovfDescriptorUploaded="false" status="0" name="vCloudUpload Test" type="application/vnd.vmware.vcloud.vAppTemplate+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.dmtf.org/ovf/envelope/1 http://schemas.dmtf.org/ovf/envelope/1/dsp8023_1.1.0.xsd http://www.vmware.com/vcloud/v1 http://example.com/api/v1.0/schema/master.xsd">
+          <Link rel="up" type="application/vnd.vmware.vcloud.vdc+xml" href="https://example.com/api/v1.0/vdc/1135817649"/>
+          <Description/>
+          <Tasks>
+              <Task status="running" startTime="2012-02-20T06:21:40.534-06:00" operation="Processing descriptor of Virtual Application Template vCloudUpload Test(1618814994)" expiryTime="2012-05-20T06:21:40.534-05:00" endTime="9999-12-31T23:59:59.999-06:00" type="application/vnd.vmware.vcloud.task+xml" href="https://example.com/api/v1.0/task/15pz4f9jemm70o8aqt2">
+                  <Owner type="application/vnd.vmware.vcloud.vAppTemplate+xml" name="vCloudUpload Test" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994"/>
+              </Task>
+          </Tasks>
+          <Files>
+              <File size="5152" bytesTransferred="5152" name="descriptor.ovf">
+                  <Link rel="upload:default" href="https://example.com:443/transfer/047fa313-0135-4512-8035-a2571c3e1e57/descriptor.ovf"/>
+              </File>
+          </Files>
+          <Children/>
+          <LeaseSettingsSection type="application/vnd.vmware.vcloud.leaseSettingsSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/leaseSettingsSection/" ovf:required="false">
+              <ovf:Info>Lease settings section</ovf:Info>
+              <Link rel="edit" type="application/vnd.vmware.vcloud.leaseSettingsSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/leaseSettingsSection/"/>
+              <StorageLeaseInSeconds>0</StorageLeaseInSeconds>
+          </LeaseSettingsSection>
+          <CustomizationSection type="application/vnd.vmware.vcloud.customizationSection+xml" href="https://example.com/api/v1.0/vAppTemplate/vappTemplate-1618814994/customizationSection/" ovf:required="false">
+              <ovf:Info>VApp template customization section</ovf:Info>
+              <CustomizeOnInstantiate>false</CustomizeOnInstantiate>
+          </CustomizationSection>
+      </VAppTemplate>
+
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:15 GMT
+- request: 
+    method: post
+    uri: https://example.com/api/v1.0/logout
+    body: ""
+    headers: 
+      x-vcloud-authorization: 
+      - UjqxxLeUxg0dS5fDFtnca9lRWit2DV1kJD65T+Xegp8=
+      accept-encoding: 
+      - gzip, deflate
+      accept: 
+      - "*/*; q=0.5, application/xml"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Mon, 20 Feb 2012 12:21:41 GMT
+      content-length: 
+      - "0"
+    body: ""
+    http_version: "1.1"
+  recorded_at: Mon, 20 Feb 2012 12:22:16 GMT
+recorded_with: VCR 2.0.0.rc1
