@@ -25,14 +25,12 @@ module VCloudUpload
 
     def self.session (username, org, password, host)
 
-    begin
         client = Client.new(username, org, password, host)
 
         yield client if block_given?
 
     ensure
         client.logout if !client.nil?
-    end
 
     end
 
