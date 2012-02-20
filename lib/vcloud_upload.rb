@@ -30,8 +30,6 @@ module VCloudUpload
 
         yield client if block_given?
 
-    rescue Exception => e
-        raise e
     ensure
         client.logout if !client.nil?
     end
@@ -83,7 +81,7 @@ module VCloudUpload
         when '1.0'
           request({:method => "POST", :url => @host + "logout"})
         when '1.5'
-          request({:method => 'DELETE', :url => @host + '/session'}) if @version == '1.5'
+          request({:method => 'DELETE', :url => @host + '/session'})
       end
     end
 
@@ -171,7 +169,6 @@ module VCloudUpload
     # @return [optional, String] This method can throw an exception with the error message sent by the vCloud.
     def upload_ovf(vDC_Link, catalog_link, vmname, filename, filepath, opts={:description => '', :blocksize => 52428800})
 
-      begin
         # Build needed vApp description
         send = "<UploadVAppTemplateParams name=\"#{vmname}\" xmlns=\"http://www.vmware.com/vcloud/v1\"> \n
                 <Description>#{opts[:description]}</Description>\n</UploadVAppTemplateParams>"
@@ -247,11 +244,7 @@ module VCloudUpload
             raise response if (response.code!=201)
           end
         end
-      rescue Exception => e
 
-        raise e
-
-      end
     end
 
 
@@ -315,7 +308,6 @@ module VCloudUpload
     # @option [String] :method The used method('GET', 'POST', 'PUT')
     # @return [RestClient::Response]  See RestClient documentation.
     def request(params)
-      begin
 
         # Add auth header
         headers = params[:headers] || {}
@@ -335,9 +327,7 @@ module VCloudUpload
         raise res if (res.code!=params[:expects] && res.code!=200)
 
         res
-      rescue Exception => e
-         raise e
-      end
+
 
     end
 
