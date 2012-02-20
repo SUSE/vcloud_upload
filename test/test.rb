@@ -27,7 +27,7 @@ class TestUpload < Test::Unit::TestCase
         end
 
 
-      cloudup.upload_ovf(cloudup.each(:vdc)[0].link, cloudup.each(:catalog)[1].link, 'vCloudUpload Test',  'vCloudWrapper.i686-0.0.1','/home/user/vCloudWrapper-0.0.1')
+      cloudup.upload_ovf(cloudup.each(:vdc)[0].link, cloudup.each(:catalog)[1].link, 'vCloudUpload Test',  'vCloudUpload.i686-0.0.1','test')
 
       cloudup.logout
 
