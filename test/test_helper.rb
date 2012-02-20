@@ -1,8 +1,7 @@
-require 'test/unit'
+
 require 'vcr'
 
-
-VCR.config do |c|
-  c.cassette_library_dir = 'fixtures/vcr_cassettes'
-  c.stub_with :fakeweb
+VCR.configure do |c|
+  c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
+  c.hook_into :fakeweb
 end
