@@ -4,3 +4,8 @@ source "http://rubygems.org"
 gemspec
 
 gem 'rest-client'
+
+group :test do
+  gem 'vcr', '~> 2.0.0.rc1'
+  gem 'fakeweb'
+end

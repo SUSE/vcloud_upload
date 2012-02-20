@@ -1,12 +1,13 @@
 $: << File.join(File.dirname(__FILE__), "..", "lib")
 
 require 'vcloud_upload'
+require '../test/test_helper'
 
 class TestUpload < Test::Unit::TestCase
 
   def test_upload
 
-      cloudup = VCloudUpload::Client.new('Max_Mustermann', 'SRo', '123456', "https://vcd1.example.com")
+      cloudup = VCloudUpload::Client.new('Max_Mustermann', 'SRo', '123456', "example.com")
 
       i = 0
       cloudup.each('vdc') do |vdc|
@@ -31,7 +32,7 @@ class TestUpload < Test::Unit::TestCase
 
     # Block version
 
-    VCloudUpload.session('Max_Mustermann', 'SRo', '123456', "https://vcd1.example.com") do |client|
+    VCloudUpload.session('Max_Mustermann', 'SRo', '123456', "localhost") do |client|
 
       i = 0
       client.each('vdc') do |vdc|
