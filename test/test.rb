@@ -1,12 +1,15 @@
 $: << File.join(File.dirname(__FILE__), "..", "lib")
 
+require 'test/unit'
 require 'vcloud_upload'
-require '../test/test_helper'
 
 class TestUpload < Test::Unit::TestCase
 
+
   def test_upload
-     VCR.use_cassette('example.com', {:match_requests_on => [:method], :record => :new_episodes}) do
+      require "test/test_helper.rb"
+
+       VCR.use_cassette('example_com', :record => :once) do
         cloudup = VCloudUpload::Client.new('Max_Mustermann', 'SRo', '123456', "example.com")
 
         puts 'All vDCs:'
@@ -30,6 +33,6 @@ class TestUpload < Test::Unit::TestCase
 
      end
 
-  end
+    end
 
 end
